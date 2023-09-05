@@ -17,18 +17,26 @@ class Building(BaseModel):
     lon: float
 
 class BuildingInfo(BaseModel):
-    b_id: int
+    i_id: int
+    # b_id: int
+    name: str
+    b_type: BuildingType
+    bjdong: str
+    lat: float
+    lon: float
     address: str
     manage_team: str
-    area: float
-    completion_date: str
-    building_image: str
+    area: str
+    completion_date: int
     cusno: int
     meter_no: int
     rate_plan: str
     meter_reading_date: int
+    contract_e: int
+    peak_e: int
 
-class PowerUsage(BaseModel):
+class EnergyUsage(BaseModel):
+    e_id: int
     b_id: int
-    datetime: str
+    month: int
     usage: float
